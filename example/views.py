@@ -74,7 +74,8 @@ class AlarmDetail(APIView):
 class AlarmEventList(generics.ListAPIView):
 
     ''' List AlarmEvents by filters, or create a new AlarmEvent '''
-
+    
+    serializer_class = AlarmEventSerializer
 
     def get_queryset(self):
         ''' Getting events which the user is subscribed '''
